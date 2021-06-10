@@ -1,0 +1,17 @@
+to_do_list = [
+  {
+    "title": "Sand the floor",
+    "priority": 1,
+    "complete": True
+  },
+  {
+    "title": "Wax on, wax off",
+    "priority": 2,
+    "complete": False
+  },
+  {
+    "title": "Paint the fence",
+    "priority": 3,
+    "complete": False
+  }
+]
