@@ -1,0 +1,41 @@
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+}
+
+/* div p {
+  font-style: italic;
+  font-size: 16px;
+} */
+
+/* this is a descendant selector. All p tags that are descendants of a div with an intro class. They can be many descendants deep */
+/* this will work on children, grandchildren, great grandchildren, etc. */
+div.intro p {
+  font-style: italic;
+  font-size: 18;
+}
+
+/* this is a child selector, the immediate descendant of a div with an intro class */
+/* this won't work on grandchildren, great grandchildren, etc. */
+div.intro > p {
+  font-style: italic;
+  font-size: 18;
+}
+
+/* Siblings are elements that are right next to each other, one on top of the other */
+
+/* Direct Sibling */
+p + p {
+  color: darkorange;
+}
+
+/* General Sibling */
+/* p ~ p {
+  color: darkorange;
+} */
+
+/* This will select an element that has BOTH the highlight and special classes */
+.highlight.special {
+  /* color: chartreuse */
+  background-color:chartreuse
+}
