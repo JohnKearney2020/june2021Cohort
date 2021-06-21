@@ -1,0 +1,49 @@
+/* * {
+  border: 1px solid red;
+} */
+
+.container {
+  background: rgba(0, 0, 0, 0.2);
+  border: 10px solid #333;
+  padding: 10px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* justify-content: center; */
+  justify-content: flex-start;
+  /* justify-content: flex-end; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* align-items concerns each row and how things are aligned in each row, align-content deals will all content in the parent container */
+  align-items: flex-start;
+  /* align-items: flex-end; */
+  /* align-items: baseline; items will align to the baseline of the text */
+  /* align-items: center; */
+  /* align-items: stretch; */
+  /* align-content treats all content as if it were one row, and will align them vertically as if they were one row */
+  /* align-content: center; */
+  /* space-evenly will put even space between each row */
+  /* align-content: space-evenly; */
+  flex-wrap: wrap;
+  height: 400px;
+}
+
+.item {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  /* margin: 4px; */
+  /* flex-grow: 1; */
+}
+
+.item-1 {
+  /* height: 40px; */
+  /* order: 1; */
+  align-self: flex-end;
+}
+
+.item-5 {
+  height: 40px;
+  /* flex-grow: 2; */
+}
