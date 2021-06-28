@@ -17,5 +17,5 @@ const logoLinks = document.getElementById("logoLinks");
 
 for(let i=0; i<arr.length; i++){
   
-  const imageLink = 
+  // const imageLink = 
 }
