@@ -1,0 +1,53 @@
+.header {
+  background: #ccc;
+  padding: 0px 10px;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+}
+
+.header-menu {
+  list-style-type: none;
+  float: right;
+}
+
+.header-title {
+  float: left;
+}
+
+.header-menu li {
+  float: right;
+  padding-right: 10px;
+}
+
+.sidebar {
+  background-color: #aaa;
+  float: right;
+  width: 20%;
+}
+
+.article {
+  background-color: blue;
+  width: 80%;
+  float: left;
+}
+
+.page-footer {
+  width: 100%;
+  background: lightblue;
+}
+.container {
+  /* clear: both; */
+  overflow: auto;
+}
+
+.photo {
+  width: 150px;
+  /* position: absolute; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* right: 0; */
+  position: relative;
+  top: 50px;
+  left: 50px;
+}

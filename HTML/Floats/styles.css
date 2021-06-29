@@ -1,0 +1,10 @@
+.fancy {
+  background: red;
+}
+
+.photo {
+  width: 200px;
+  float: left;
+  padding: 0 20px;
+}
+
