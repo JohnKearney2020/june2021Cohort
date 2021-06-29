@@ -35,3 +35,5 @@ first_number = 10
 second_number = 20
 answer = first_number + second_number
 print(answer)
+
+print(first_name[0])
