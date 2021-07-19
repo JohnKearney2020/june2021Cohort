@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/head') %> 
+</head>
+<body>
+  <%- include('partials/navbar') %>
+  <% ceoList.forEach((eachCeo) => { %>
+    <h2><a href="/ceo-details/<%= eachCeo.slug %>"><%= eachCeo.name %> </a></h2>
+    <h4> <%= eachCeo.year %> </h4>
+  <% }) %>
+</body>
+</html>
+
+
+<!-- ceoList is the object sent to this partial-->

@@ -4,6 +4,14 @@ const db = require('./db');
 
 const app = express();
 
+// ===============================================================================
+//                             Template Engine / View Engine
+// ===============================================================================
+// set method is used to set express settings
+app.set('view engine', 'ejs');
+app.set('views', 'views'); // point express to where our templates are stored (what folder they are in)
+
+
 const hostname = '127.0.0.1';
 const port = 3000;
 
@@ -14,7 +22,34 @@ const server = http.createServer(app);
 //                                  route handlers
 // ===============================================================================
 app.get('/', (req, res) => {
-  res.send('Home Page');
+  // res.send('Home Page');
+  // Templates
+  res.render('home', {
+    // "title" and "special" are variables used in our 'home' view
+    title: "JJ's Diner",
+    special: "All the bacon you can have!",
+    // user: null
+    user: { name: "John Kearney" }
+  }) // name of our view, 
+})
+
+app.get('/menu', (req,res) => {
+  res.render('menu', {
+    title: "JJ's menu",
+    specials: db.specials
+  })
+})
+
+app.get('/menu/:id', (req, res) => {
+  // get the id from the param
+  // get the data from db.specials based on that id
+  const foundSpecial = db.specials.find((eachSpecial) => eachSpecial.id === Number(req.params.id));
+
+  // render the template
+  res.render('menuItem', {
+    title: "JJ's Menu",
+    special: foundSpecial
+  })
 })
 
 app.get('/hello', (req, res) => {
