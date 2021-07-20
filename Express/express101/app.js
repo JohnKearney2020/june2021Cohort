@@ -15,6 +15,9 @@ app.set('views', 'views'); // point express to where our templates are stored (w
 const hostname = '127.0.0.1';
 const port = 3000;
 
+// Set up static folder to access things like images
+app.use(express.static('./public'))
+
 // tell node to use the express app to handle all of our requests
 const server = http.createServer(app);
 

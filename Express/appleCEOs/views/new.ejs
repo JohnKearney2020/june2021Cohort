@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/head') %> 
+</head>
+<body>
+  <%- include('partials/navbar') %>
+  <h1><%= title %></h1>
+  <!-- form will go here -->
+  <div class="container">
+    <!-- Our form needs a method -->
+    <form method="POST">
+      <div>
+        <label for="ceo_name" class="">Name</label>
+        <input type="text" name="ceo_name" id="ceo_name">
+      </div>
+      <div>
+        <label for="ceo_name" class="">Year Appointed</label>
+        <input type="text" name="ceo_year" id="ceo_year">
+      </div>
+      <button type="submit">Add New CEO</button>
+    </form>
+  </div>
+</body>
+</html>

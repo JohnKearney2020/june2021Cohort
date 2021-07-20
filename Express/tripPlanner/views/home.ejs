@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/head') %> 
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('partials/navbar') %> 
+  <div class="container">
+    <div class="row">
+      <% trips.forEach(eachTrip => { %>
+        <div class="card m-2" style="width: 18rem;">
+          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title"><%= eachTrip.title %></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between">Departure Date: <span class="fw-bold"><%= eachTrip.departure_date %></span></li>
+            <li class="list-group-item d-flex justify-content-between">Return Date: <span class="fw-bold"><%= eachTrip.return_date %></span></li>
+          </ul>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>
+

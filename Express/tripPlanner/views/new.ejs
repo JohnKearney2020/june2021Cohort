@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/head') %> 
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('partials/navbar') %> 
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="mb-3">
+          <label for="tripTitleInput" class="form-label">Tripe Title</label>
+          <input type="text" class="form-control" id="tripTitleInput" aria-describedby="tripTitleHelp">
+          <div id="tripTitleHelp" class="form-text">Give your trip a name you'll never forget</div>
+        </div>
+        <!-- Departure Date -->
+        <div class="mb-3">
+          <label for="departureDateInput" class="form-label">Departure Date</label>
+          <input type="date" class="form-control" id="departureDateInput">
+        </div>
+        <!-- Arrival Date -->
+        <div class="mb-3">
+          <label for="departureDateInput" class="form-label">Arr Date</label>
+          <input type="date" class="form-control" id="departureDateInput">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
