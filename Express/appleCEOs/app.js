@@ -75,10 +75,13 @@ app.post('/new', (req, res) => {
   res.redirect('/ceos');
 })
 
-app.get('/ceos', (req,res) => {
-  res.render('ceo-list', {
-    title: "List of CEOs",
-    ceoList: db
+app.get('/profile', (req,res) => {
+  // Fetch that data from the database
+  const userID = req.session.userID;
+  // Fetch that user from the database
+  res.render('profile', {
+    name: "List of CEOs",
+    email: "sdfsf#asdfsd"
   })
 })
 

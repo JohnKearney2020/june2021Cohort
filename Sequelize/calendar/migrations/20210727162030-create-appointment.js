@@ -39,3 +39,8 @@ module.exports = {
     await queryInterface.dropTable('Appointments');
   }
 };
+
+.findAll({
+  where: {
+      id: { $in: favs }
+  }
